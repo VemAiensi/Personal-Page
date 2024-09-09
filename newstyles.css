@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "JetBrains";
+    src: url('Fonts/woff2/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal; 
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: JetBrains;
+    overflow: hidden;
+    display: flex;
+    /* so overflow hidden does the trick! of not making it scrollable */
+}
+
+.grid-container{
+    margin: 0 auto; /*This is really essential?*/
+    padding: 0 20px; /*creates a padding when screen shrinks*/
+    height:100dvh;
+    display: grid;
+    max-width: 1600px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px;
+    gap: 30px 50px;
+    /* grid-template-areas: 
+        "1 1 2 2 2"
+        "3 3 4 4 4"; */
+    justify-content: center;
+}
+
+.site-title{
+    /* grid-area: "1"; */
+    grid-column-start: 1;
+    grid-column-end:4;
+
+    /* border-style: solid;
+    border-color: black;
+    border-width: 3px; */
+
+    display:flex;
+    align-items:center;
+    font-size: 3rem;
+}
+
+.site-title img{
+    height:4rem;
+}
+
+.nav{
+    /* grid-area: "2"; */
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.nav span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border-radius: 0.5rem;
+    background-color: rgb(161, 161, 161);
+}
+
+.left-side{
+    /* grid-area: "3"; */
+    grid-column-start: 1;
+    grid-column-end:3;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+    padding:20px;
+    background-color: rgb(161, 161, 161);
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.profile-pic{
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    overflow:hidden;
+}
+.profile-pic img{
+    width: 100%;
+    object-fit: cover;
+}
+.description{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #dfdfdf;
+}
+.ex-Links{
+    padding:20px;
+    background-color: rgb(161, 161, 161);
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.right-side{
+    /* border-style: solid;
+    border-color: black;
+    border-width: 3px; */
+    /* grid-area: "4"; */
+    grid-column-start: 3;
+    grid-column-end:7;
+    background-color: rgb(161, 161, 161);
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding:20px;
+}
