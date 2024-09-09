@@ -4,21 +4,37 @@
     font-weight: normal;
     font-style: normal; 
 }
+
+@font-face {
+    font-family: "fabiolo";
+    src: url('Fonts/fabiolo-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal; 
+}
+
 body{
     margin: 0;
     padding: 0;
-    font-family: JetBrains;
+    font-family: fabiolo;
     overflow: hidden;
     display: flex;
+    height:100dvh;
+    background-color: #D8EFD3;
     /* so overflow hidden does the trick! of not making it scrollable */
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .grid-container{
     margin: 0 auto; /*This is really essential?*/
+    margin-top: 30px;
     padding: 0 20px; /*creates a padding when screen shrinks*/
-    height:100dvh;
+    
     display: grid;
-    max-width: 1600px;
+    max-width: 1800px;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 100px;
     gap: 30px 50px;
@@ -29,6 +45,7 @@ body{
 }
 
 .site-title{
+    
     /* grid-area: "1"; */
     grid-column-start: 1;
     grid-column-end:4;
@@ -36,14 +53,22 @@ body{
     /* border-style: solid;
     border-color: black;
     border-width: 3px; */
-
     display:flex;
     align-items:center;
     font-size: 3rem;
 }
 
-.site-title img{
-    height:4rem;
+.site-title span{
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    width: 5rem;
+    height: 5rem;
+    overflow:hidden;
 }
 
 .nav{
@@ -53,16 +78,16 @@ body{
 
     display: flex;
     justify-content: flex-end;
-    align-items: end;
+    align-self: end;
+    background-color: #0a6b6b;
+    border-radius: 20px;
 }
 
 .nav span{
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-left: 10px;
-    padding: 2px 10px;
-    border-radius: 0.5rem;
-    background-color: rgb(161, 161, 161);
+    margin-left: 30px;
+    padding: 5px 30px;
 }
 
 .left-side{
@@ -76,7 +101,8 @@ body{
 
 .profile{
     padding:20px;
-    background-color: rgb(161, 161, 161);
+    background-color: #55AD9B;
+
     border-radius: 20px;
     margin-bottom: 30px;
 
@@ -93,10 +119,7 @@ body{
     border-radius: 50%;
     overflow:hidden;
 }
-.profile-pic img{
-    width: 100%;
-    object-fit: cover;
-}
+
 .description{
     padding: 10px;
     border-radius: 10px;
@@ -104,7 +127,7 @@ body{
 }
 .ex-Links{
     padding:20px;
-    background-color: rgb(161, 161, 161);
+    background-color: #0a6b6b;
     border-radius: 20px 20px 0 0;
 
     display: flex;
@@ -120,8 +143,34 @@ body{
     /* grid-area: "4"; */
     grid-column-start: 3;
     grid-column-end:7;
-    background-color: rgb(161, 161, 161);
+    background-color: #ffffff;
     margin-bottom: 50px;
     border-radius: 20px;
     padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-logo{
+    display:flex;
+    align-items:center;
+    width: 40rem;
+    height: 40rem;
+    overflow:hidden;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.subtitle{
+    font-size: 3rem;
 }
