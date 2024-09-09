@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "JetBrains";
+    src: url('Fonts/woff2/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "fabiolo";
+    src: url('Fonts/fabiolo-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: fabiolo;
+    overflow: hidden;
+    display: flex;
+    height:100dvh;
+    background-color: #D8EFD3;
+    /* so overflow hidden does the trick! of not making it scrollable */
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.grid-container{
+    margin: 0 auto; /*This is really essential?*/
+    margin-top: 30px;
+    padding: 0 20px; /*creates a padding when screen shrinks*/
+    
+    display: grid;
+    max-width: 1800px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px;
+    gap: 30px 50px;
+    /* grid-template-areas: 
+        "1 1 2 2 2"
+        "3 3 4 4 4"; */
+    justify-content: center;
+}
+
+.site-title{
+    
+    /* grid-area: "1"; */
+    grid-column-start: 1;
+    grid-column-end:4;
+
+    /* border-style: solid;
+    border-color: black;
+    border-width: 3px; */
+    display:flex;
+    align-items:center;
+    font-size: 3rem;
+}
+
+.site-title span{
+    margin-left: 30px;
+    font-weight: bolder;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    width: 5rem;
+    height: 5rem;
+    overflow:hidden;
+}
+
+.nav{
+    /* grid-area: "2"; */
+    grid-column-start: 4;
+    grid-column-end: 7;
+
+    display: flex;
+    justify-content: flex-end;
+    align-self: end;
+    background-color: #0a6b6b;
+    border-radius: 20px;
+}
+
+.nav span{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 30px;
+    padding: 5px 30px;
+}
+
+.left-side{
+    /* grid-area: "3"; */
+    grid-column-start: 1;
+    grid-column-end:3;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+    padding:20px;
+    background-color: #55AD9B;
+
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.profile span{
+    font-size: 3rem;
+}
+
+.profile-pic{
+    margin-top:50px;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+.description{
+    height: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.divider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.line{
+    margin:10px;
+    width:50%;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #0a6b6b;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #0a6b6b;
+}
+
+.ex-Links{
+    padding:20px;
+    background-color: #0a6b6b;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.right-side{
+    /* border-style: solid;
+    border-color: black;
+    border-width: 3px; */
+    /* grid-area: "4"; */
+    grid-column-start: 3;
+    grid-column-end:7;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-logo{
+    display:flex;
+    align-items:center;
+    width: 40rem;
+    height: 40rem;
+    overflow:hidden;
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 5rem;
+}
+
+.subtitle{
+    font-size: 3rem;
+}
+
+.ex-Links {
+    padding:20px;
+    background-color: #0a6b6b;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    text-align: center;
+    align-items: center;
+    
+}
+
+.links{
+    display: block;
+}
+
+.links a{
+    text-decoration: none;
+}
+
+.links:hover #color{
+    fill:#8b8b8b;
+}
+
+.icon{
+    width: 4rem;
+    margin: 0 5px 5px;
+}
+
+.icon #color{
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover #color{
+    fill: white;
+}
+
+.icon #color {
+    fill:white;
+}
+
+.footerText span {
+    font-size: 15px;
+    color: white;
+}
