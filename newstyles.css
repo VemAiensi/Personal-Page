@@ -109,11 +109,16 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-grow: 1;
 }
 
+.profile span{
+    font-size: 3rem;
+}
+
 .profile-pic{
+    margin-top:50px;
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
@@ -121,10 +126,31 @@ img{
 }
 
 .description{
+    height: 30%;
     padding: 10px;
     border-radius: 10px;
-    background-color: #dfdfdf;
+    background-color: #ffffff;
 }
+
+.divider{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.line{
+    margin:10px;
+    width:50%;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #0a6b6b;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #0a6b6b;
+}
+
 .ex-Links{
     padding:20px;
     background-color: #0a6b6b;
@@ -173,4 +199,54 @@ img{
 
 .subtitle{
     font-size: 3rem;
+}
+
+.ex-Links {
+    padding:20px;
+    background-color: #0a6b6b;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    text-align: center;
+    align-items: center;
+    
+}
+
+.links{
+    display: block;
+}
+
+.links a{
+    text-decoration: none;
+}
+
+.links:hover #color{
+    fill:#8b8b8b;
+}
+
+.icon{
+    width: 4rem;
+    margin: 0 5px 5px;
+}
+
+.icon #color{
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover #color{
+    fill: white;
+}
+
+.icon #color {
+    fill:white;
+}
+
+.footerText span {
+    font-size: 15px;
+    color: white;
 }
