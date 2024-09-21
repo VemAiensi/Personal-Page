@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+    font-family: 'DMC';
+    src: url('./assets/fonts/DMC5Font.otf');
+    font-weight: 100;
+}
+
+body{
+    height: 100dvh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+img{
+    width:80%;
+    max-width: 1080px;
+    border:5px solid rgb(255, 255, 255)
+}
+
+h1{
+    letter-spacing: 3px;
+    font-family: "DMC", serif;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+p{
+    text-align: center;
+    font-family: "Libre Baskerville";
+}
+div{
+    border:1px solid white;
+    width: 70%;
+}
